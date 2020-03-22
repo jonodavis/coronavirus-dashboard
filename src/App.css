@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+html {
+  overflow-y: scroll;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  width: 1200px;
+  margin: auto;
+  color: #333333;
+  font-family: CircularStd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.countries {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
 }
 
-.App-link {
-  color: #61dafb;
+.country {
+  padding: 10px;
+  margin: auto;
+  /* margin-bottom: 0px; */
+  width: 21%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  padding: 0px 16px 0px 16px;
+  border-radius: 12px;
+  border: 1px solid #333333;
+  margin-top: 0px;
+  font-family: Roboto Mono, monospace;
+}
+
+.card-title {
+  margin: 16px 0px 2px 6px;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.countryName {
+  margin: 16px 0px 2px 6px;
+}
+
+.flag {
+  margin: 16px 6px 0px 0px;
+}
+
+img.emoji {
+  height: 1.5em;
+  width: 1.5em;
+  /* margin: 0 .05em 0 .1em; */
+  vertical-align: -1.5em;
+}
+
+.searchBox {
+  border: 1px solid #dedede;
+  border-radius: 12px;
+  outline: none;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: Roboto Mono, monospace;
+  /* text-transform: uppercase; */
+}
+
+.searchBox:hover {
+  border: 1px solid #c5c5c5;
+}
+
+.searchBox:active, .searchBox:focus {
+  border: 1px solid #333333;
+}
+
+.searchBox::-webkit-search-cancel-button {
+  display: none;
+}
+
+.stockList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.stock {
+  padding: 0;
+  border-radius: 12px;
+  border: 1px solid #333333;
+  margin: 16px;
+  font-family: Roboto Mono, monospace;
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.symbol {
+  width: 100%;
+  margin: 0;
+  padding: 16px;
+}
+
+.percentChange {
+  padding: 16px 16px;
+  margin: 0;
+  text-align: right;
+}
+
+
+.currentPrice {
+  padding: 16px;
+  margin: 0;
+}
+
+.Green {
+  background: rgba(139, 246, 139, 0.565);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.Red {
+  background: rgba(246, 139, 139, 0.565);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 0px 0px 12px 12px;
 }
