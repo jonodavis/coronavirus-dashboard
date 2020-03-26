@@ -1,20 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
+:root {
+  --main-color: #333333;
+}
+
 html {
   overflow-y: scroll;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+::selection {
+  background: rgba(139, 139, 246, 0.565);
 }
 
 .content {
   width: 1200px;
   margin: auto;
-  color: #333333;
+  color: var(--main-color);
   font-family: CircularStd;
 }
 
 .countries {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 160px;
   /* justify-content: space-between; */
 }
 
@@ -28,7 +41,7 @@ html {
 .card {
   padding: 0px 16px 0px 16px;
   border-radius: 12px;
-  border: 1px solid #333333;
+  border: 1px solid var(--main-color);
   margin-top: 0px;
   font-family: Roboto Mono, monospace;
 }
@@ -73,7 +86,7 @@ img.emoji {
 }
 
 .searchBox:active, .searchBox:focus {
-  border: 1px solid #333333;
+  border: 1px solid var(--main-color);
 }
 
 .searchBox::-webkit-search-cancel-button {
@@ -91,7 +104,7 @@ img.emoji {
 .stock {
   padding: 0;
   border-radius: 12px;
-  border: 1px solid #333333;
+  border: 1px solid var(--main-color);
   margin: 16px;
   font-family: Roboto Mono, monospace;
   width: 20%;
@@ -112,7 +125,6 @@ img.emoji {
   text-align: right;
 }
 
-
 .currentPrice {
   padding: 16px;
   margin: 0;
@@ -132,4 +144,68 @@ img.emoji {
   justify-content: space-between;
   width: 100%;
   border-radius: 0px 0px 12px 12px;
+}
+
+.cases {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.caseBox {
+  width: 21%;
+  margin: 16px;
+}
+
+.caseNumber {
+  font-family: Roboto Mono, monospace;
+  margin: 16px 0px 2px 8px;
+}
+
+.nzCase {
+  padding: 0px 16px 0px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--main-color);
+  /* margin-top: 0px; */
+  justify-content: space-between;
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.totalCases{
+  font-family: Roboto Mono, monospace;
+}
+
+.caseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+a {
+  text-decoration: none;
+  color: #008fd5;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  height: 864px;
+}
+
+.spacer {
+  width: 100%;
+  height: 16px;
+}
+.spacer::after{
+  content: "";
 }

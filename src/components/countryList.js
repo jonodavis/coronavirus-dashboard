@@ -10,7 +10,7 @@ const CountryList = ({ covidCountries, searchField }) => {
       <div className="countries">
         <Total covidCountries={covidCountries} searchField={searchField} />
         {covidCountries.map(country => (
-          <Country country={country} />
+          <Country country={country} key={country.name} />
         ))}
       </div>
     </animated.div>

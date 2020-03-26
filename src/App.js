@@ -2,9 +2,11 @@ import "./App.css";
 import React, { Component } from "react";
 import CountryList from "./components/countryList";
 import SearchBox from "./components/searchBox";
-import StockList from "./components/stockList";
+import CaseList from "./components/caseList";
 import covid from "novelcovid";
 import "circular-std";
+import cases from "./data/cases.json";
+import ChartList from "./components/chartList";
 
 class App extends Component {
   constructor() {
@@ -30,22 +32,14 @@ class App extends Component {
       ],
       indexSymbols: ["SPY", "DIA", "QQQ", "XLP"],
       stocks: [],
-      indicies: []
+      indicies: [],
+      lng: 172.767,
+      lat: -41.161,
+      zoom: 4.6
     };
   }
 
-  searchChange = event => {
-    this.setState({
-      filteredCountries: this.state.covidCountries.filter(country => {
-        return country.country
-          .toLowerCase()
-          .includes(event.target.value.toLowerCase());
-      })
-    });
-    this.setState({ searchField: event.target.value });
-  };
-
-  componentDidMount() {
+  requestCovidData = () => {
     let covidAll = covid.all();
     let covidCountries = covid.countries();
     covidAll
@@ -58,7 +52,9 @@ class App extends Component {
         this.setState({ covidCountries: data, filteredCountries: data });
       })
       .catch(console.log);
+  };
 
+  requestStocks = () => {
     this.state.stockSymbols.forEach(symbol => {
       fetch(
         `https://cloud.iexapis.com/v1/stock/${symbol}/quote?token=pk_6544ddef60034ad3bba9032c28bf940b`
@@ -80,16 +76,44 @@ class App extends Component {
         )
         .catch(console.log);
     });
+  };
+
+  searchChange = event => {
+    this.setState({
+      filteredCountries: this.state.covidCountries.filter(country => {
+        return country.country
+          .toLowerCase()
+          .includes(event.target.value.toLowerCase());
+      })
+    });
+    this.setState({ searchField: event.target.value });
+  };
+
+  componentDidMount() {
+    this.requestStocks();
+    this.requestCovidData();
   }
 
   render() {
     return (
       <div className="content">
-        <h1>US Financial Markets</h1>
-        <StockList stocks={this.state.indicies} />
-        <h1>Stock Prices</h1>
-        <StockList stocks={this.state.stocks} />
-        <h1>COVID-19 Global Cases</h1>
+        <div className="caseHeader">
+          <h1>New Zealand Confirmed Cases</h1>
+          <a
+            href="https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-current-cases"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Source
+          </a>
+        </div>
+        <CaseList cases={cases} />
+        <h1>Financial Markets</h1>
+        <ChartList />
+        {/* <StockList stocks={this.state.indicies} /> */}
+        {/* <h1>Stock Prices</h1> */}
+        {/* <StockList stocks={this.state.stocks} /> */}
+        <h1>Confirmed Global Cases</h1>
         <SearchBox searchChange={this.searchChange} />
         <CountryList
           covidCountries={this.state.filteredCountries}
