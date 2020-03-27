@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import CountryList from "./components/countryList";
 import SearchBox from "./components/searchBox";
 import CaseList from "./components/caseList";
-import covid from "novelcovid";
 import "circular-std";
 import cases from "./data/cases.json";
 import ChartList from "./components/chartList";
@@ -40,42 +39,12 @@ class App extends Component {
   }
 
   requestCovidData = () => {
-    let covidAll = covid.all();
-    let covidCountries = covid.countries();
-    covidAll
-      .then(data => {
-        this.setState({ covidAll: data });
-      })
-      .catch(console.log);
-    covidCountries
+    fetch("https://corona.lmao.ninja/countries?sort=cases")
+      .then(res => res.json())
       .then(data => {
         this.setState({ covidCountries: data, filteredCountries: data });
       })
       .catch(console.log);
-  };
-
-  requestStocks = () => {
-    this.state.stockSymbols.forEach(symbol => {
-      fetch(
-        `https://cloud.iexapis.com/v1/stock/${symbol}/quote?token=pk_6544ddef60034ad3bba9032c28bf940b`
-      )
-        .then(res => res.json())
-        .then(data =>
-          this.setState({ stocks: this.state.stocks.concat([data]) })
-        )
-        .catch(console.log);
-    });
-
-    this.state.indexSymbols.forEach(symbol => {
-      fetch(
-        `https://cloud.iexapis.com/v1/stock/${symbol}/quote?token=pk_6544ddef60034ad3bba9032c28bf940b`
-      )
-        .then(res => res.json())
-        .then(data =>
-          this.setState({ indicies: this.state.indicies.concat([data]) })
-        )
-        .catch(console.log);
-    });
   };
 
   searchChange = event => {
@@ -90,7 +59,6 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.requestStocks();
     this.requestCovidData();
   }
 
@@ -110,10 +78,7 @@ class App extends Component {
         <CaseList cases={cases} />
         <h1>Financial Markets</h1>
         <ChartList />
-        {/* <StockList stocks={this.state.indicies} /> */}
-        {/* <h1>Stock Prices</h1> */}
-        {/* <StockList stocks={this.state.stocks} /> */}
-        <h1>Confirmed Global Cases</h1>
+        <h1>Global Confirmed Cases</h1>
         <SearchBox searchChange={this.searchChange} />
         <CountryList
           covidCountries={this.state.filteredCountries}

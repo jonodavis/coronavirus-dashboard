@@ -3018,11 +3018,6 @@ country-code-emoji@^1.0.0:
   resolved "https://registry.yarnpkg.com/country-code-emoji/-/country-code-emoji-1.0.0.tgz#7c77791839c9e9921beec08ef080caa7cfb8b40c"
   integrity sha512-fBM5A49oZkOxOVb0bx7q7Hanlfh8e3z/r6/ZnFhbL57JXGIgWPC2HYrjXEyiGML7OFftDV/WfAlJdDkoAbj1Rg==
 
-country-list@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/country-list/-/country-list-2.2.0.tgz#e248338cafb97b2d86cf0784a25dceb4d52054d1"
-  integrity sha512-AS21pllCp72LmUztqXPVKXK3TRyap1XlohGLqN04cXH2rFB9vo7SnH5sMnqltZPnu9ie/x1se3UuCZJbGXErfw==
-
 create-ecdh@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.3.tgz#c9111b6f33045c4697f144787f9254cdc77c45ff"
@@ -6715,11 +6710,6 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-fetch@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
-  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
-
 node-forge@0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.9.0.tgz#d624050edbb44874adca12bb9a52ec63cb782579"
@@ -6823,13 +6813,6 @@ normalize-url@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
-
-novelcovid@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/novelcovid/-/novelcovid-1.0.4.tgz#0355b77e0d8526fa7cb7b33c326c7bb7ee8d3c7d"
-  integrity sha512-62o9pMnYhZInpQnkpkZwt7l++CRNTdaWHoRUqkb7ZXN/Q2xOWD261iji2/qn2Iss/aTj6vjlIIQDZXYW7xTRow==
-  dependencies:
-    node-fetch "^2.6.0"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
