@@ -7,6 +7,8 @@ import "circular-std";
 import cases from "./data/cases.json";
 import ChartList from "./components/chartList";
 
+// api used for covid19 data https://github.com/novelcovid/api
+
 class App extends Component {
   constructor() {
     super();
@@ -75,6 +77,7 @@ class App extends Component {
             Source
           </a>
         </div>
+        
         <CaseList cases={cases} />
         <h1>Financial Markets</h1>
         <ChartList />

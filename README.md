@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Monitoring the 2019-2020 Coronavirus Outbreak
 
-## Available Scripts
+This repo started as just a dashboard for monitoring the coronavirus pandemic and its widespread economic effects. It is now more just of a collection of information on the coronavirus
 
-In the project directory, you can run:
+### Data Sources
+- John Hopkins University github repo 
+  - https://github.com/CSSEGISandData/COVID-19
+- John Hopkins University map 
+  - https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6
+- US Source 
+  - https://covidtracking.com/
+- Worldometer 
+  - https://www.worldometers.info/coronavirus/
 
-### `yarn start`
+### Economic Relief Packages
+- USA 
+  - https://www.reddit.com/r/dataisbeautiful/comments/fppc7v/oc_where_the_money_goes_in_the_us_senates_2t/
+- NZ 
+  - https://www.beehive.govt.nz/release/121-billion-support-new-zealanders-and-business
+  - Health Spending 
+    - https://www.beehive.govt.nz/sites/default/files/2020-03/Health%20package%20factsheet.pdf
+- AUS 
+  - https://www.pm.gov.au/media/economic-stimulus-package
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Misc
+- Modelling spread in New Zealand 
+  - https://cpb-ap-se2.wpmucdn.com/blogs.auckland.ac.nz/dist/d/75/files/2017/01/Supression-and-Mitigation-New-Zealand-TPM-006.pdf
+  - Two options for containment - supression or mitigation
+  - Supression - delay epidemic and herd immunity by enforcing strong controls (lowest death rate - huge economic impact)
+  - Mitigation - acquire herd immunity as quickly as possible whilst not exceeding hospital capacity (higher death rate - lesser economic impact)
+  - Supression is reliant on a cure or vaccine becoming available, whilst mitigation is not, however vaccine would still help if available before herd immunity kicks in

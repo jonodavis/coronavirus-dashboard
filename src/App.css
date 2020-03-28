@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
 
 :root {
   --main-color: #333333;
@@ -85,7 +85,8 @@ img.emoji {
   border: 1px solid #c5c5c5;
 }
 
-.searchBox:active, .searchBox:focus {
+.searchBox:active,
+.searchBox:focus {
   border: 1px solid var(--main-color);
 }
 
@@ -149,7 +150,7 @@ img.emoji {
 .cases {
   width: 100%;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 16px;
 }
@@ -175,7 +176,7 @@ img.emoji {
   flex-wrap: wrap;
 }
 
-.totalCases{
+.totalCases {
   font-family: Roboto Mono, monospace;
 }
 
@@ -206,6 +207,6 @@ a:hover {
   width: 100%;
   height: 16px;
 }
-.spacer::after{
+.spacer::after {
   content: "";
 }
