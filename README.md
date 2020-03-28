@@ -1,6 +1,6 @@
 ## Monitoring the 2019-2020 Coronavirus Outbreak
 
-This repo started as just a dashboard for monitoring the coronavirus pandemic and its widespread economic effects. It is now more just of a collection of information on the coronavirus
+This repo started as just a [dashboard](https://stayhome.nz/dashboard) for monitoring the coronavirus pandemic and its widespread economic effects. It is now more just of a collection of information on the coronavirus
 
 ### Data Sources
 - John Hopkins University github repo 
