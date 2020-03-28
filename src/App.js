@@ -67,6 +67,7 @@ class App extends Component {
   render() {
     return (
       <div className="content">
+        <p>As of 28/03/2020 the location data for the most recent NZ cases has not been updated on the Ministry of Heath website. Only the total cases [451] is available. Hopefully this will be updated/resolved soon.</p>
         <div className="caseHeader">
           <h1>New Zealand Confirmed Cases</h1>
           <a
@@ -77,7 +78,6 @@ class App extends Component {
             Source
           </a>
         </div>
-        
         <CaseList cases={cases} />
         <h1>Financial Markets</h1>
         <ChartList />
