@@ -7,9 +7,12 @@ const NZCase = ({ nzCase, min, max }) => {
   }
   return (
     <div className="caseBox">
+      <p className="location">{nzCase.location === 'Total' ?  null : <span role="img" aria-label="location">📍</span>} {nzCase.location}</p>
       <div className="nzCase" style={{background: `rgba(246, 139, 139, ${shading})`}}>
-        <p className="location">{nzCase.location === 'Total' ?  null : <span role="img" aria-label="location">📍</span>} {nzCase.location}</p>
+        <p className="totalText">Total Cases</p>
         <p className="totalCases">{nzCase.totalCases}</p>
+        <p className="perMillionText">Cases Per Million</p>
+        <p className="perMillionNumber">{((nzCase.totalCases / nzCase.population)*1000000).toFixed(2)}</p>
       </div>
     </div>
   );
