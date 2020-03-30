@@ -20,18 +20,30 @@ const Total = ({ covidCountries, searchField }) => {
       </div>
       <div className="card">
         <div className="card-body">
-          <p className="card-text">
-            Cases: {covidCountries.reduce((acc, curr) => acc + curr.cases, 0)} (+
+          <p className="card-text countryCases">
+            Cases:
+          </p>
+          <p className="card-number countryCases">
+            {covidCountries.reduce((acc, curr) => acc + curr.cases, 0)} (+
             {covidCountries.reduce((acc, curr) => acc + curr.todayCases, 0)}
             )
           </p>
-          <p className="card-text">
-            Deaths: {covidCountries.reduce((acc, curr) => acc + curr.deaths, 0)} (+
+          <p className="card-text countryCases">
+            Deaths:
+          </p>
+          <p className="card-number countryCases">
+            {covidCountries.reduce((acc, curr) => acc + curr.deaths, 0)} (+
             {covidCountries.reduce(
               (acc, curr) => acc + curr.todayDeaths,
               0
             )}
             )
+          </p>
+          <p className="card-text perMillion">
+            Cases Per Million:
+          </p>
+          <p className="card-number perMillion">
+            {((covidCountries.reduce((acc, curr) => acc + curr.cases, 0)/7800000000)*1000000).toFixed(0)}
           </p>
         </div>
       </div>

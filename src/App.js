@@ -77,6 +77,7 @@ class App extends Component {
             Source
           </a>
         </div>
+        <p>New Zealand case information is obtained from the Ministry of Health website and is updated daily as data is made available. Delays in data updates could be caused by the Ministry of Health changing how the website displays data, as has happened quite frequently as the number of cases has increased. Totals are the number of confirmed and probable cases. Highlighting of the boxes below is based on the total number of cases per DHB.</p>
         <CaseList cases={cases} />
         <h1>Financial Markets</h1>
         <ChartList />

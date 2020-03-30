@@ -3,6 +3,7 @@
 
 :root {
   --main-color: #333333;
+  --background-color: #ffffff;
 }
 
 html {
@@ -10,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--background-color)
 }
 
 ::selection {
@@ -44,7 +45,6 @@ body {
   border-radius: 12px;
   border: 1px solid var(--main-color);
   margin-top: 0px;
-  font-family: Roboto Mono, monospace;
 }
 
 .card-title {
@@ -54,6 +54,35 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.card-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.countryCases {
+  margin-bottom: 0;
+}
+
+.card-text {
+  width: 30%;
+}
+
+.card-number {
+  text-align: right;
+  font-family: Roboto Mono, monospace;
+  width: 70%;
+}
+
+.card-text.perMillion {
+  width: 60%;
+}
+
+.card-number.perMillion {
+  width: 40%;
 }
 
 .countryName {
@@ -79,6 +108,8 @@ img.emoji {
   padding: 1rem;
   font-size: 1rem;
   font-family: Roboto Mono, monospace;
+  background-color: var(--background-color);
+  color: var(--main-color);
   /* text-transform: uppercase; */
 }
 

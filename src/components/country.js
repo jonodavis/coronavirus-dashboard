@@ -20,11 +20,23 @@ const Country = ({ country }) => {
 
       <div className="card">
         <div className="card-body">
-          <p className="card-text">
-            Cases: {country.cases} (+{country.todayCases})
+          <p className="card-text countryCases">
+            Cases: 
           </p>
-          <p className="card-text">
-            Deaths: {country.deaths} (+{country.todayDeaths})
+          <p className="card-number countryCases">
+            {country.cases} (+{country.todayCases})
+          </p>
+          <p className="card-text countryCases">
+            Deaths:
+          </p>
+          <p className="card-number countryCases">
+            {country.deaths} (+{country.todayDeaths})
+          </p>
+          <p className="card-text perMillion">
+            Cases Per Million:
+          </p>
+          <p className="card-number perMillion">
+            {country.casesPerOneMillion}
           </p>
         </div>
       </div>
