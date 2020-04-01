@@ -11,10 +11,14 @@ This repo started as just a [dashboard](https://stayhome.nz/dashboard) for monit
   - https://covidtracking.com/
 - Worldometer 
   - https://www.worldometers.info/coronavirus/
+- Our World in Data
+  - https://ourworldindata.org/coronavirus
 
 ### Economic Relief Packages
 - USA 
   - https://www.reddit.com/r/dataisbeautiful/comments/fppc7v/oc_where_the_money_goes_in_the_us_senates_2t/
+  - https://www.documentcloud.org/documents/6819239-FINAL-FINAL-CARES-ACT.html
+  - https://www.npr.org/2020/03/26/821457551/whats-inside-the-senate-s-2-trillion-coronavirus-aid-package
 - NZ 
   - https://www.beehive.govt.nz/release/121-billion-support-new-zealanders-and-business
   - Health Spending 
@@ -29,3 +33,6 @@ This repo started as just a [dashboard](https://stayhome.nz/dashboard) for monit
   - Supression - delay epidemic and herd immunity by enforcing strong controls (lowest death rate - huge economic impact)
   - Mitigation - acquire herd immunity as quickly as possible whilst not exceeding hospital capacity (higher death rate - lesser economic impact)
   - Supression is reliant on a cure or vaccine becoming available, whilst mitigation is not, however vaccine would still help if available before herd immunity kicks in
+- South Korea CDC - source for SK testing data
+  - https://www.cdc.go.kr/board/board.es?mid=&bid=0030
+
