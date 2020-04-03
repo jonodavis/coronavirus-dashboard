@@ -1,17 +1,17 @@
-import "./App.css";
-import React, { Component } from "react";
-import CountryList from "./components/countryList";
-import SearchBox from "./components/searchBox";
-import CaseList from "./components/caseList";
-import "circular-std";
-import cases from "./data/cases.json";
-import ChartList from "./components/chartList";
+import "./App.css"
+import React, { Component } from "react"
+import CountryList from "./components/countryList"
+import SearchBox from "./components/searchBox"
+import CaseList from "./components/caseList"
+import "circular-std"
+import cases from "./data/cases.json"
+import ChartList from "./components/chartList"
 
 // api used for covid19 data https://github.com/novelcovid/api
 
 class App extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       covidAll: {},
       covidCountries: [],
@@ -37,31 +37,31 @@ class App extends Component {
       lng: 172.767,
       lat: -41.161,
       zoom: 4.6
-    };
+    }
   }
 
   requestCovidData = () => {
     fetch("https://corona.lmao.ninja/countries?sort=cases")
       .then(res => res.json())
       .then(data => {
-        this.setState({ covidCountries: data, filteredCountries: data });
+        this.setState({ covidCountries: data, filteredCountries: data })
       })
-      .catch(console.log);
-  };
+      .catch(console.log)
+  }
 
   searchChange = event => {
     this.setState({
       filteredCountries: this.state.covidCountries.filter(country => {
         return country.country
           .toLowerCase()
-          .includes(event.target.value.toLowerCase());
+          .includes(event.target.value.toLowerCase())
       })
-    });
-    this.setState({ searchField: event.target.value });
-  };
+    })
+    this.setState({ searchField: event.target.value })
+  }
 
   componentDidMount() {
-    this.requestCovidData();
+    this.requestCovidData()
   }
 
   render() {
@@ -77,7 +77,15 @@ class App extends Component {
             Source
           </a>
         </div>
-        <p>New Zealand case information is obtained from the Ministry of Health website and is updated daily as data is made available. Delays in data updates could be caused by the Ministry of Health changing how the website displays data, as has happened quite frequently as the number of cases has increased. Totals are the number of confirmed and probable cases. Highlighting of the boxes below is based on the total number of cases per DHB.</p>
+        <p>
+          New Zealand case information is obtained from the Ministry of Health
+          website and is updated daily as data is made available. Delays in data
+          updates could be caused by the Ministry of Health changing how the
+          website displays data, as has happened quite frequently as the number
+          of cases has increased. Totals are the number of confirmed and
+          probable cases. Highlighting of the boxes below is based on the total
+          number of cases per DHB.
+        </p>
         <CaseList cases={cases} />
         <h1>Financial Markets</h1>
         <ChartList />
@@ -88,8 +96,8 @@ class App extends Component {
           searchField={this.state.searchField}
         />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
