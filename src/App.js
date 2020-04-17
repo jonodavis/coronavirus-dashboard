@@ -29,33 +29,33 @@ class App extends Component {
         "DIS",
         "TSLA",
         "NFLX",
-        "FB"
+        "FB",
       ],
       indexSymbols: ["SPY", "DIA", "QQQ", "XLP"],
       stocks: [],
       indicies: [],
       lng: 172.767,
       lat: -41.161,
-      zoom: 4.6
+      zoom: 4.6,
     }
   }
 
   requestCovidData = () => {
-    fetch("https://corona.lmao.ninja/countries?sort=cases")
-      .then(res => res.json())
-      .then(data => {
+    fetch("https://corona.lmao.ninja/v2/countries?sort=cases")
+      .then((res) => res.json())
+      .then((data) => {
         this.setState({ covidCountries: data, filteredCountries: data })
       })
       .catch(console.log)
   }
 
-  searchChange = event => {
+  searchChange = (event) => {
     this.setState({
-      filteredCountries: this.state.covidCountries.filter(country => {
+      filteredCountries: this.state.covidCountries.filter((country) => {
         return country.country
           .toLowerCase()
           .includes(event.target.value.toLowerCase())
-      })
+      }),
     })
     this.setState({ searchField: event.target.value })
   }
