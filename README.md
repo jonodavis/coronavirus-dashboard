@@ -35,4 +35,5 @@ This repo started as just a [dashboard](https://stayhome.nz/dashboard) for monit
   - Supression is reliant on a cure or vaccine becoming available, whilst mitigation is not, however vaccine would still help if available before herd immunity kicks in
 - South Korea CDC - source for SK testing data
   - https://www.cdc.go.kr/board/board.es?mid=&bid=0030
+- https://medium.com/amnon-shashua/can-we-contain-covid-19-without-locking-down-the-economy-2a134a71873f
 
